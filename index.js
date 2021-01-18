@@ -23,9 +23,12 @@ questionsSet.forEach(askQuestion);
 
 function askQuestion(question) {
   const answer = formatQuestion(question);
-  question.markAnswer(answer);
-  console.log(question.getResult());
-  console.log(question.getCorrectAnswer());
+  const result = question.markAnswer(answer);
+  if(result) {
+    console.log("Thats a correct answer!!");
+  } else {
+    console.log(`Looks like it wasn't that dumb question!! You got it wrong.\nThe correct answer is ${question.getCorrectAnswer()}`)
+  }
 }
 
 function formatQuestion(question) {

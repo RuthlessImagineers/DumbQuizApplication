@@ -19,6 +19,7 @@ class Question {
     if(this.isAnsweredCorrectly(participantAnswer)) {
       this.result = true;
     }
+    return this.result;
   }
   getCorrectAnswer() {
     return this.answer;
