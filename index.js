@@ -1,5 +1,5 @@
 const inputReader = require('readline-sync');
-const questions = require('./questions.js');
+const questions = require('./src/questions.js');
 
 console.log("Welcome to the dumb quiz");
 const goAhead = inputReader.keyInYN("Are you ready to the quiz?\n");
