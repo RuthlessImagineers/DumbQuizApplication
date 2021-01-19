@@ -12,7 +12,7 @@ class Question {
   }
 
   isAnsweredCorrectly(participantAnswer) {
-    return participantAnswer == this.answer;
+    return participantAnswer.toUpperCase() == this.answer;
   }
 
   markAnswer(participantAnswer) {
@@ -32,7 +32,10 @@ class Question {
 
 const questions = [
   new Question("What is 1+1?", [1,2,3,4], 'B'),
-  new Question("The monkey is a?", ["Mammal", "Reptile","Snail", "Bird"], 'A')
+  new Question("The monkey is a?", ["Mammal", "Reptile","Snail", "Bird"], 'A'),
+  new Question("Sun raises in the?",["North","South","East", "West"], 'C'),
+  new Question('What is the equation of water?',["CO2","NO2","XYZ","H2O"],'D'),
+  new Question('How many planets in our solar system?',[6,8,9,10],'C')
 ];
 
 function questionsSet() {
