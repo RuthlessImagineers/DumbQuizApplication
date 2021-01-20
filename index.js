@@ -2,7 +2,7 @@ const inputReader = require('readline-sync');
 const questions = require('./src/questions.js');
 
 console.log("Welcome to the dumb quiz");
-const goAhead = inputReader.keyInYN("Are you ready to the quiz?\n");
+const goAhead = inputReader.keyInYN("Are you ready to start the quiz?\n");
 
 if(!goAhead){ 
   console.log("Well.. its fine, come back when you are ready.");
@@ -42,8 +42,6 @@ function askQuestion(question) {
   console.log();
   console.log("---------------------------------");
 }
-
-
 
 function formatQuestion(question) {
   return inputReader.question(`${question.title}\n${question.getOptions()}\n`);
